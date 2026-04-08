@@ -1,16 +1,14 @@
-# e_commerce
+# e_commerce_flutter
 
-A new Flutter project.
+A scalable e-commerce mobile application built with Flutter using Clean Architecture  mvc, Firebase, and REST APIs.
+Designed for high performance, maintainability, and a smooth user experience across Android, iOS, and web.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Features
+User Authentication: Sign up, login, and password reset .
+Product Management: Browse products, search, filter, and view detailed pages.
+Shopping Cart & Checkout: Add/remove items, view total, and proceed to secure checkout.
+Payment Integration: Stripe integration for online payments.
+Push Notifications: Firebase Cloud Messaging for real-time updates.
+Location Services: Access device location for shipping or store features.
+Clean Architecture: Separate layers for presentation, domain, and data for maintainability.
+State Management: Getx/Bloc/Cubit for predictable and testable state handling.
