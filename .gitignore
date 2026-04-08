@@ -46,3 +46,4 @@ app.*.map.json
 #  Sensitive files (IMPORTANT)
 firebase_keys/
 android/app/google-services.json
+.env

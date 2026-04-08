@@ -13,10 +13,12 @@ import 'package:e_commerce/core/localization/translation.dart';
 import 'core/constant/color.dart';
 import 'core/serveces/services.dart';
 import 'routes.dart';
-
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 @pragma('vm:entry-point')
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
+
   await initialServices();
   await Firebase.initializeApp();
   FlutterError.onError = (errorDetails) {
@@ -34,7 +36,7 @@ Future<void> main() async {
   FirebaseMessaging.onMessage.listen((RemoteMessage message) {
     firebaseMessagingListen(message);
   });
-  Stripe.publishableKey = 'pk_test_51SJBupFe9XbrnuTGZw6XhdAdVxME28pwDzA4QDs2a03VLpylVOayL1vQhd4ruTJp3KxqQ6acyej1NZ5dfUZWRqJb00g6cfz926';
+  Stripe.publishableKey = dotenv.env['STRIPE_KEY']!;
   runApp(const MyApp());
 }
 
